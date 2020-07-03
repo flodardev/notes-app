@@ -27,13 +27,11 @@ const port = process.env.PORT || 5000
 const notesRoutes = require("./routes/notes")
 app.use("/api", notesRoutes)
 
-if (process.env.PORT === "production") {
-    // For deployment
-    app.use(express.static(path.join(__dirname, 'build')));
-    app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-    });
-}
+// For deployment
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/*', (req, res) => {
+res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.listen(port, () => {
     console.log("Server runnin on port 3000")
