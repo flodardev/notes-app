@@ -4,7 +4,7 @@ Note taking app built with React
 
 ## Deployed
 
-https://radolfdailyjournal.herokuapp.com/
+https://flodardevnotesapp.herokuapp.com/
 
 ## Built With
 
